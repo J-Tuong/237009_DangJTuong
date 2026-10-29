@@ -48,3 +48,8 @@
 - Image Docker Hub: jtuongdang/backend:latest
 - URL: https://hub.docker.com/r/jtuongdang/backend
 - Port: 5000
+
+## Docker Hub Images
+- Backend Image: `jtuongdang/backend:latest`
+- Frontend Image: `jtuongdang/frontend:latest`
+- Cổng chạy: Backend (5000), Frontend (80 Nginx)
