@@ -53,3 +53,9 @@
 - Backend Image: `jtuongdang/backend:latest`
 - Frontend Image: `jtuongdang/frontend:latest`
 - Cổng chạy: Backend (5000), Frontend (80 Nginx)
+
+## Docker Hub Repositories
+- **Backend Image:** `jtuongdang/backend:latest`
+  - URL: https://hub.docker.com/r/jtuongdang/backend
+- **Frontend Image:** `jtuongdang/frontend:latest`
+  - URL: https://hub.docker.com/r/jtuongdang/frontend
