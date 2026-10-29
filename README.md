@@ -30,3 +30,16 @@
   - `POST /api/foods`: Thêm món ăn mới (chống trùng foodId, validate dữ liệu)
   - `PUT /api/foods/:id`: Cập nhật thông tin món ăn
   - `DELETE /api/foods/:id`: Xóa món ăn khỏi hệ thống
+
+## Frontend (React + Vite)
+- Khởi chạy dev: `npm run dev`
+- Cổng mặc định: `5173`
+- Tính năng:
+  - Hiển thị danh sách món ăn kèm phân loại, đơn giá, số lượng tồn kho
+  - Xem chi tiết từng món ăn dạng modal popup
+  - Thêm mới món ăn (kiểm tra form, chống trùng foodId)
+  - Cập nhật thông tin món ăn
+  - Xóa món ăn với hộp thoại xác nhận
+  - Tìm kiếm thời gian thực theo từ khóa có dấu/không dấu
+  - Hiển thị đầy đủ thông báo phản hồi (thành công/lỗi)
+- Biến môi trường: `VITE_API_URL`
