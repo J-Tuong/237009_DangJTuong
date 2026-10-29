@@ -1,61 +1,54 @@
-# Quản lý món ăn trên nền tảng đám mây
-- Họ tên: Đặng J Tường
-- MSSV: 237009
-- Học phần: Điện toán đám mây
-- Công nghệ: React, Node.js/Express, MongoDB Atlas, Docker, Render
+# BÀI BÁO CÁO THỰC HÀNH - ĐIỆN TOÁN ĐÁM MÂY
+**Hệ thống Quản lý Món ăn (Food Management System)**
 
-## Cấu trúc thư mục
-- `backend/`: Mã nguồn API Express & Mongoose
-- `frontend/`: Giao diện ứng dụng React
+---
 
-## Thông tin cơ sở dữ liệu (MongoDB Atlas)
-- **Database:** `237009_DangJTuong`
-- **Collection:** `foods`
-- **Các trường dữ liệu:** `foodId`, `name`, `category`, `cuisine`, `ingredients`, `price`, `quantity`, `description`, `imageUrl`
-- **Dữ liệu mẫu:** Đã khởi tạo 3 bản ghi (F01 - Phở Bò, F02 - Bún Bò Huế, F03 - Cơm Tấm)
+## 1. Thông tin sinh viên
+* **Họ và tên:** Đặng J Tường
+* **Mã số sinh viên (MSSV):** 237009
+* **GitHub repository:** `237009_DANGJTUONG`
+* **MongoDB database:** `237009_DangJTuong`
+* **MongoDB collection:** `foods`
+* **Docker Hub backend image:** `jtuongdang/backend:latest`
+  * Liên kết: https://hub.docker.com/r/jtuongdang/backend
+* **Docker Hub frontend image:** `jtuongdang/frontend:latest`
+  * Liên kết: https://hub.docker.com/r/jtuongdang/frontend
+* **Tên dịch vụ Render Backend:** `api-237009` (URL: https://backend-latest-gnxp.onrender.com)
+* **Tên dịch vụ Render Frontend:** `web-237009` (URL: https://web-237009.onrender.com)
 
-## Thông tin cơ sở dữ liệu (MongoDB Atlas)
-- Database: 237009_DangJTuong
-- Collection: foods
-- Cac truong: foodId, name, category, cuisine, ingredients, price, quantity, description, imageUrl
-- Du lieu mau: Da tao 3 ban ghi (F01, F02, F03)
+---
 
-## Backend API (Node.js & Express)
-- Port: `5000`
-- Endpoints:
-  - `GET /health`: Kiểm tra trạng thái máy chủ và kết nối database
-  - `GET /api/foods`: Lấy danh sách toàn bộ món ăn
-  - `GET /api/foods?search={keyword}`: Tìm kiếm không dấu/có dấu theo tên, loại món, vùng miền
-  - `GET /api/foods/:id`: Xem chi tiết một món ăn
-  - `POST /api/foods`: Thêm món ăn mới (chống trùng foodId, validate dữ liệu)
-  - `PUT /api/foods/:id`: Cập nhật thông tin món ăn
-  - `DELETE /api/foods/:id`: Xóa món ăn khỏi hệ thống
+## 2. Đường dẫn kiểm tra dịch vụ trực tuyến
+* **Giao diện người dùng (Frontend):** https://web-237009.onrender.com
+* **Endpoint kiểm tra Backend & Database (Health Check):** https://backend-latest-gnxp.onrender.com/health
+* **Endpoint API danh sách món ăn (JSON):** https://backend-latest-gnxp.onrender.com/api/foods
 
-## Frontend (React + Vite)
-- Khởi chạy dev: `npm run dev`
-- Cổng mặc định: `5173`
-- Tính năng:
-  - Hiển thị danh sách món ăn kèm phân loại, đơn giá, số lượng tồn kho
-  - Xem chi tiết từng món ăn dạng modal popup
-  - Thêm mới món ăn (kiểm tra form, chống trùng foodId)
-  - Cập nhật thông tin món ăn
-  - Xóa món ăn với hộp thoại xác nhận
-  - Tìm kiếm thời gian thực theo từ khóa có dấu/không dấu
-  - Hiển thị đầy đủ thông báo phản hồi (thành công/lỗi)
-- Biến môi trường: `VITE_API_URL`
+---
 
-## Docker Backend
-- Image Docker Hub: jtuongdang/backend:latest
-- URL: https://hub.docker.com/r/jtuongdang/backend
-- Port: 5000
+## 3. Chi tiết các nội dung đã hoàn thành
 
-## Docker Hub Images
-- Backend Image: `jtuongdang/backend:latest`
-- Frontend Image: `jtuongdang/frontend:latest`
-- Cổng chạy: Backend (5000), Frontend (80 Nginx)
+* **Câu 1 - 3 (Database & RESTful API):**
+  * Thiết lập cơ sở dữ liệu MongoDB Atlas `237009_DangJTuong`, collection `foods`.
+  * Xây dựng đầy đủ các API CRUD:
+    * `GET /api/foods`: Lấy danh sách thực đơn.
+    * `GET /api/foods/:id`: Lấy chi tiết món ăn theo mã/ID.
+    * `POST /api/foods`: Thêm mới món ăn vào cơ sở dữ liệu.
+    * `PUT /api/foods/:id`: Cập nhật thông tin món ăn.
+    * `DELETE /api/foods/:id`: Xóa món ăn khỏi hệ thống.
+    * `GET /health`: Kiểm tra trạng thái máy chủ và kết nối database.
 
-## Docker Hub Repositories
-- **Backend Image:** `jtuongdang/backend:latest`
-  - URL: https://hub.docker.com/r/jtuongdang/backend
-- **Frontend Image:** `jtuongdang/frontend:latest`
-  - URL: https://hub.docker.com/r/jtuongdang/frontend
+* **Câu 4 (Giao diện Frontend):**
+  * Xây dựng bằng ReactJS và Vite, hiển thị đầy đủ thông tin món ăn, bảng phân loại, giá niêm yết và tồn kho.
+  * Hỗ trợ tìm kiếm theo từ khóa có dấu và không dấu trong thời gian thực.
+  * Hộp thoại thêm mới, chỉnh sửa và xác nhận xóa món ăn.
+
+* **Câu 5 & 6 (Đóng gói Docker):**
+  * Đóng gói Backend thành Docker Image chạy trên môi trường Node.js (`node:20-alpine`), mở cổng 5000.
+  * Đóng gói Frontend bằng kỹ thuật Multi-stage build (Node 20 build mã nguồn và phục vụ qua Nginx Alpine tại cổng 80).
+  * Build chuẩn kiến trúc `linux/amd64` và phát hành công khai trên Docker Hub:
+    * Backend: https://hub.docker.com/r/jtuongdang/backend
+    * Frontend: https://hub.docker.com/r/jtuongdang/frontend
+
+* **Câu 7 & 8 (Triển khai trên Render):**
+  * Backend triển khai dưới tên `api-237009`, kết nối MongoDB Atlas qua biến môi trường bảo mật.
+  * Frontend triển khai dưới tên `web-237009`, trỏ trực tiếp đến API Backend trên đám mây.
