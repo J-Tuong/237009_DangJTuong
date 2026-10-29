@@ -43,3 +43,8 @@
   - Tìm kiếm thời gian thực theo từ khóa có dấu/không dấu
   - Hiển thị đầy đủ thông báo phản hồi (thành công/lỗi)
 - Biến môi trường: `VITE_API_URL`
+
+## Docker Backend
+- Image Docker Hub: jtuongdang/backend:latest
+- URL: https://hub.docker.com/r/jtuongdang/backend
+- Port: 5000
